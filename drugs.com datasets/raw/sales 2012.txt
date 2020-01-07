@@ -1,0 +1,201 @@
+Rank	Drug	Sales ($000)	 	 
+1	Nexium
+AstraZeneca	5,638,773		Stats
+2	Abilify
+Otsuka Pharmaceutical Co., Ltd	5,602,876		Stats
+3	Crestor
+AstraZeneca	4,763,616		Stats
+4	Advair Diskus
+GlaxoSmithKline	4,617,652		Stats
+5	Cymbalta
+4,472,920		Stats
+6	Humira
+AbbVie Inc.	4,302,401		Stats
+7	Enbrel
+Amgen Inc.	3,993,484		Stats
+8	Remicade
+Janssen Pharmaceuticals, Inc.	3,720,360		Stats
+9	Copaxone
+Teva Pharmaceuticals USA, Inc.	3,332,573		Stats
+10	Neulasta
+Amgen Inc.	3,328,669		Stats
+11	Rituxan
+Genentech, Inc.	3,128,779		Stats
+12	Singulair
+Merck			Stats
+13	Atripla
+Gilead Sciences, Inc.	2,765,628		Stats
+14	OxyContin
+Purdue Pharma LP	2,694,908		Stats
+15	Spiriva
+2,693,157		Stats
+16	Avastin
+Genentech, Inc.	2,564,468		Stats
+17	Plavix
+		Stats
+18	Januvia
+Merck	2,499,699		Stats
+19	Lantus
+Sanofi	2,206,073		Stats
+20	Truvada
+Gilead Sciences, Inc.	2,206,066		Stats
+21	atorvastatin
+Generic Drug	2,103,073		Stats
+22	Epogen
+Amgen Inc.	2,084,701		Stats
+23	Lantus Solostar
+Sanofi	2,062,758		Stats
+24	Diovan
+Novartis Pharmaceuticals Corporation	1,943,832		Stats
+25	Lyrica
+Pfizer Inc.	1,924,094		Stats
+26	Celebrex
+Pfizer Inc.	1,866,967		Stats
+27	Herceptin
+Genentech, Inc.	1,794,738		Stats
+28	Gleevec
+Novartis Pharmaceuticals Corporation	1,693,760		Stats
+29	Namenda
+Allergan plc	1,686,880		Stats
+30	enoxaparin
+Generic Drug	1,686,489		Stats
+31	Lipitor
+Pfizer Inc.			Stats
+32	Lucentis
+Genentech, Inc.	1,576,913		Stats
+33	Avonex
+Biogen	1,566,959		Stats
+34	Actos
+Takeda Pharmaceutical Company Limited			Stats
+35	Vyvanse
+Takeda Pharmaceutical Company Limited	1,536,279		Stats
+36	Suboxone
+1,491,897		Stats
+37	OneTouch
+1,452,813		Stats
+38	methylphenidate
+Generic Drug	1,430,764		Stats
+39	Zetia
+Merck	1,401,571		Stats
+40	AndroGel
+AbbVie Inc.	1,332,853		Stats
+41	Seroquel
+AstraZeneca			Stats
+42	Incivek
+Vertex Pharmaceuticals Incorporated	1,291,132		Stats
+43	Lidoderm
+Endo Pharmaceuticals Inc.	1,282,449		Stats
+44	Symbicort
+AstraZeneca	1,233,551		Stats
+45	Diovan HCT
+Novartis Pharmaceuticals Corporation			Stats
+46	Rebif
+EMD Serono, Inc.	1,161,499		Stats
+47	Novolog
+Novo Nordisk	1,141,395		Stats
+48	Seroquel XR
+AstraZeneca	1,119,775		Stats
+49	Alimta
+Eli Lilly and Company	1,117,626		Stats
+50	amphetamine/dextroamphetamine
+Generic Drug	1,090,598		Stats
+51	Eloxatin
+Sanofi			Stats
+52	Combivent
+Boehringer Ingelheim Pharmaceuticals, Inc.	1,086,194		Stats
+53	Viagra
+Pfizer Inc.	1,083,709		Stats
+54	TriCor
+AbbVie Inc.	1,080,387		Stats
+55	Levemir
+Novo Nordisk	1,078,538		Stats
+56	ProAir HFA
+Teva Pharmaceuticals USA, Inc.	1,075,862		Stats
+57	Procrit
+Janssen Pharmaceuticals, Inc.	1,066,058		Stats
+58	Nasonex
+Merck	1,055,442		Stats
+59	Niaspan
+AbbVie Inc.	1,037,484		Stats
+60	NovoLog FlexPen
+Novo Nordisk	1,033,504		Stats
+61	Lovaza
+GlaxoSmithKline	1,017,443		Stats
+62	escitalopram
+Generic Drug			Stats
+63	Flovent HFA
+GlaxoSmithKline	990,585		Stats
+64	Humalog
+Eli Lilly and Company	986,613		Stats
+65	metoprolol
+Generic Drug	972,787		Stats
+66	Neupogen
+Amgen Inc.	959,879		Stats
+67	Reyataz
+Bristol-Myers Squibb Company	945,267		Stats
+68	Isentress
+Merck	911,280		Stats
+69	budesonide
+Generic Drug	902,456		Stats
+70	Aranesp
+Amgen Inc.	884,627		Stats
+71	Vytorin
+Merck	884,275		Stats
+72	Janumet
+Merck	880,874		Stats
+73	Cialis
+Eli Lilly and Company	878,387		Stats
+74	Adderall XR
+Takeda Pharmaceutical Company Limited	854,705		Stats
+75	acetaminophen/hydrocodone
+Generic Drug	850,101		Stats
+76	Restasis
+Allergan plc	840,902		Stats
+77	Aciphex
+Eisai Inc.	828,102		Stats
+78	Pradaxa
+Boehringer Ingelheim Pharmaceuticals, Inc.	816,693		Stats
+79	Prezista
+Janssen Pharmaceuticals, Inc.	790,695		Stats
+80	fentanyl
+Generic Drug	785,927		Stats
+81	Orencia
+Bristol-Myers Squibb Company	778,370		Stats
+82	VESIcare
+Astellas Pharma US, Inc.	769,037		Stats
+83	Betaseron
+Bayer HealthCare Pharmaceuticals Inc.	758,784		Stats
+84	Dexilant
+Takeda Pharmaceutical Company Limited	758,236		Stats
+85	Prevnar 13
+Pfizer Inc.	749,775		Stats
+86	Lunesta
+Sunovion Pharmaceuticals Inc.	742,357		Stats
+87	Benicar
+Daiichi Sankyo	729,198		Stats
+88	modafinil
+Generic Drug			Stats
+89	Zyvox
+Pfizer Inc.	694,623		Stats
+90	Synagis
+MedImmune, Inc.			Stats
+91	Gilenya
+Novartis Pharmaceuticals Corporation			Stats
+92	Victoza
+Novo Nordisk			Stats
+93	Renvela
+Sanofi			Stats
+94	Evista
+		Stats
+95	Synthroid
+AbbVie Inc.			Stats
+96	Xeloda
+Genentech, Inc.			Stats
+97	Ventolin HFA
+GlaxoSmithKline			Stats
+98	Lexapro
+Allergan plc			Stats
+99	Varivax
+Merck			Stats
+100	Zostavax
+Merck			Stats

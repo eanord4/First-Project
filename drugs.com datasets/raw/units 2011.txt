@@ -1,0 +1,201 @@
+Rank	Drug	Units (000)	 	 
+1	budesonide
+Generic Drug	39,871		Stats
+2	Nexium
+AstraZeneca	29,134		Stats
+3	ProAir HFA
+Teva Pharmaceuticals USA, Inc.	28,710		Stats
+4	acetaminophen/hydrocodone
+Generic Drug			Stats
+5	OneTouch
+28,264		Stats
+6	Singulair
+Merck	27,996		Stats
+7	Lantus
+Sanofi	24,109		Stats
+8	Lipitor
+Pfizer Inc.	24,108		Stats
+9	Advair Diskus
+GlaxoSmithKline	23,945		Stats
+10	Cymbalta
+23,563		Stats
+11	Plavix
+21,485		Stats
+12	fentanyl
+Generic Drug	17,636		Stats
+13	azithromycin
+Generic Drug			Stats
+14	Crestor
+AstraZeneca	15,677		Stats
+15	AndroGel
+AbbVie Inc.	14,840		Stats
+16	Spiriva
+12,724		Stats
+17	Lantus Solostar
+Sanofi	12,635		Stats
+18	Novolog
+Novo Nordisk	11,713		Stats
+19	Actos
+Takeda Pharmaceutical Company Limited	11,310		Stats
+20	Nasonex
+Merck	11,038		Stats
+21	Humalog
+Eli Lilly and Company	10,537		Stats
+22	Abilify
+Otsuka Pharmaceutical Co., Ltd	10,171		Stats
+23	metoprolol
+Generic Drug	9,847		Stats
+24	Levemir
+Novo Nordisk	9,132		Stats
+25	Lexapro
+Allergan plc	8,964		Stats
+26	Diovan
+Novartis Pharmaceuticals Corporation	8,858		Stats
+27	Combivent
+Boehringer Ingelheim Pharmaceuticals, Inc.	8,266		Stats
+28	Namenda
+Allergan plc	8,207		Stats
+29	Januvia
+Merck	8,157		Stats
+30	Lyrica
+Pfizer Inc.	8,124		Stats
+31	Zetia
+Merck	7,946		Stats
+32	enoxaparin
+Generic Drug	7,942		Stats
+33	NovoLog FlexPen
+Novo Nordisk	7,696		Stats
+34	Flovent HFA
+GlaxoSmithKline	7,317		Stats
+35	Seroquel
+AstraZeneca	7,147		Stats
+36	Suboxone
+7,019		Stats
+37	Lovaza
+GlaxoSmithKline	6,539		Stats
+38	Vytorin
+Merck	6,465		Stats
+39	Lidoderm
+Endo Pharmaceuticals Inc.	6,440		Stats
+40	Benicar
+Daiichi Sankyo	6,272		Stats
+41	Symbicort
+AstraZeneca	6,208		Stats
+42	venlafaxine
+Generic Drug			Stats
+43	Remicade
+Janssen Pharmaceuticals, Inc.	5,983		Stats
+44	Diovan HCT
+Novartis Pharmaceuticals Corporation	5,513		Stats
+45	OxyContin
+Purdue Pharma LP	5,324		Stats
+46	Synthroid
+AbbVie Inc.			Stats
+47	Restasis
+Allergan plc	5,214		Stats
+48	Zyprexa
+4,938		Stats
+49	Lovenox
+Sanofi	4,925		Stats
+50	Niaspan
+AbbVie Inc.	4,743		Stats
+51	valacyclovir
+Generic Drug			Stats
+52	Celebrex
+Pfizer Inc.	4,158		Stats
+53	bupropion
+Generic Drug			Stats
+54	TriCor
+AbbVie Inc.	3,921		Stats
+55	Evista
+3,794		Stats
+56	Aciphex
+Eisai Inc.	3,617		Stats
+57	donepezil
+Generic Drug			Stats
+58	Janumet
+Merck	3,457		Stats
+59	Enbrel
+Amgen Inc.	3,432		Stats
+60	Geodon
+Pfizer Inc.	2,892		Stats
+61	Epogen
+Amgen Inc.	2,868		Stats
+62	VESIcare
+Astellas Pharma US, Inc.			Stats
+63	Vyvanse
+Takeda Pharmaceutical Company Limited	2,763		Stats
+64	Tamiflu
+		Stats
+65	Rebif
+EMD Serono, Inc.	2,404		Stats
+66	amphetamine/dextroamphetamine
+Generic Drug	2,348		Stats
+67	Cialis
+Eli Lilly and Company	2,245		Stats
+68	Xalatan
+Pfizer Inc.			Stats
+69	Truvada
+Gilead Sciences, Inc.	2,163		Stats
+70	Humira
+AbbVie Inc.	2,162		Stats
+71	Rituxan
+Genentech, Inc.	2,127		Stats
+72	Provigil
+Teva Pharmaceuticals USA, Inc.	1,929		Stats
+73	Avastin
+Genentech, Inc.	1,869		Stats
+74	Viagra
+Pfizer Inc.	1,859		Stats
+75	Atripla
+Gilead Sciences, Inc.	1,846		Stats
+76	Seroquel XR
+AstraZeneca	1,810		Stats
+77	Detrol LA
+Pfizer Inc.			Stats
+78	Pradaxa
+Boehringer Ingelheim Pharmaceuticals, Inc.			Stats
+79	atorvastatin
+Generic Drug			Stats
+80	methylphenidate
+Generic Drug			Stats
+81	Adderall XR
+Takeda Pharmaceutical Company Limited	1,654		Stats
+82	Fluvirin
+Seqirus			Stats
+83	Lunesta
+Sunovion Pharmaceuticals Inc.	1,499		Stats
+84	Aranesp
+Amgen Inc.	1,397		Stats
+85	Procrit
+Janssen Pharmaceuticals, Inc.	1,347		Stats
+86	Neulasta
+Amgen Inc.	1,298		Stats
+87	Concerta
+Janssen Pharmaceuticals, Inc.			Stats
+88	Solodyn
+Medicis Pharmaceutical Corporation	1,136		Stats
+89	Reyataz
+Bristol-Myers Squibb Company	1,134		Stats
+90	AMLODIP BES/BENAZ
+		Stats
+91	olanzapine
+Generic Drug			Stats
+92	Erbitux
+Eli Lilly and Company	1,029		Stats
+93	Levaquin
+Janssen Pharmaceuticals, Inc.			Stats
+94	Varivax
+Merck			Stats
+95	Lucentis
+Genentech, Inc.	927		Stats
+96	Copaxone
+Teva Pharmaceuticals USA, Inc.	912		Stats
+97	Isentress
+Merck	886		Stats
+98	Eloxatin
+Sanofi			Stats
+99	Alimta
+Eli Lilly and Company	677		Stats
+100	Neupogen
+Amgen Inc.	646		Stats
