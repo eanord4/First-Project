@@ -19,10 +19,10 @@ import os
 
 
 def sales_path(year):
-    return os.path.join('drugs.com datasets', 'raw', f'sales {year}.txt')
+    return os.path.join('drugs.com-datasets-original', f'sales {year}.txt')
 
 def units_path(year):
-    return os.path.join('drugs.com datasets', 'raw', f'units {year}.txt')
+    return os.path.join('drugs.com-datasets-original', f'units {year}.txt')
 
 def test_file(path_func, year):
     
