@@ -7,8 +7,8 @@
 import os, csv
 
 
-indir = os.path.join('drugs.com datasets', 'raw')
-outdir = os.path.join('drugs.com datasets', 'preprocessed')
+indir = 'drugs.com-datasets-original'
+outdir = 'drugs.com-datasets-preprocessed'
 path_funcs = {
 
     'in': {
