@@ -1,3 +1,5 @@
+# Eric Nordstrom
+
 # script to confirm formatting of text data taken from drugs.com
 # formatting observed upon inspection:
 #   columns separated by tabs
@@ -9,7 +11,7 @@
 #       sometimes the value is left out, which does not remove a tab (this can result in 3 tabs in a row)
 #       STRATEGY: count tabs FROM THE RIGHT SIDE
 #
-# RESULT: all datasets pass this test!
+# RESULT: all datasets pass this test.
 
 
 import os
@@ -46,7 +48,6 @@ for path_func in sales_path, units_path:
                     not entries[0].isnumeric()
                     or not entries[1].strip()  # check whether something actually included for the drug name
                 ):
-
                     print('\t' + repr(line))
 
                 even = not even
