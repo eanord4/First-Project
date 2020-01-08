@@ -15,6 +15,7 @@ def process_file(value_type, year):
     infilename = os.path.split(inpath)[-1]
     outfilename = os.path.split(outpath)[-1]
     print(f'Processing "{infilename}" to "{outfilename}"...')
+    div = 1_000 if value_type == 'units' else 1_000_000
 
     with open(inpath, 'r') as infile, open(outpath, 'w') as outfile:
         
@@ -24,7 +25,7 @@ def process_file(value_type, year):
         writer.writerow([
             'name',
             'company',
-            value_type + '_1000s'  # both sales and units are given in thousands
+            value_type + '_MM'  # both sales and units are given in thousands; to be converted to millions for readability
         ])  # header of output file
 
         for line in infile:
@@ -32,11 +33,17 @@ def process_file(value_type, year):
             if odd:
                 last_odd = line.split('\t')
             else:
+
                 last_even = line.split('\t')
+                value = last_even[-3].replace(',', '')
+                
+                if value:
+                    value = int(value) / 1000
+
                 writer.writerow([
                     last_odd[1].rstrip(),  # drug name
                     last_even[-4] if len(last_even) > 3 else '',  # company
-                    last_even[-3].replace(',', '')  # value
+                    value  # convert from thousands to millions
                 ])
 
             odd = not odd

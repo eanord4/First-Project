@@ -1,101 +1,101 @@
-name,company,units_1000s
-budesonide,Generic Drug,39871
-Nexium,AstraZeneca,29134
-ProAir HFA,"Teva Pharmaceuticals USA, Inc.",28710
+name,company,units_MM
+budesonide,Generic Drug,39.871
+Nexium,AstraZeneca,29.134
+ProAir HFA,"Teva Pharmaceuticals USA, Inc.",28.71
 acetaminophen/hydrocodone,Generic Drug,
-OneTouch,,28264
-Singulair,Merck,27996
-Lantus,Sanofi,24109
-Lipitor,Pfizer Inc.,24108
-Advair Diskus,GlaxoSmithKline,23945
-Cymbalta,,23563
-Plavix,,21485
-fentanyl,Generic Drug,17636
+OneTouch,,28.264
+Singulair,Merck,27.996
+Lantus,Sanofi,24.109
+Lipitor,Pfizer Inc.,24.108
+Advair Diskus,GlaxoSmithKline,23.945
+Cymbalta,,23.563
+Plavix,,21.485
+fentanyl,Generic Drug,17.636
 azithromycin,Generic Drug,
-Crestor,AstraZeneca,15677
-AndroGel,AbbVie Inc.,14840
-Spiriva,,12724
-Lantus Solostar,Sanofi,12635
-Novolog,Novo Nordisk,11713
-Actos,Takeda Pharmaceutical Company Limited,11310
-Nasonex,Merck,11038
-Humalog,Eli Lilly and Company,10537
-Abilify,"Otsuka Pharmaceutical Co., Ltd",10171
-metoprolol,Generic Drug,9847
-Levemir,Novo Nordisk,9132
-Lexapro,Allergan plc,8964
-Diovan,Novartis Pharmaceuticals Corporation,8858
-Combivent,"Boehringer Ingelheim Pharmaceuticals, Inc.",8266
-Namenda,Allergan plc,8207
-Januvia,Merck,8157
-Lyrica,Pfizer Inc.,8124
-Zetia,Merck,7946
-enoxaparin,Generic Drug,7942
-NovoLog FlexPen,Novo Nordisk,7696
-Flovent HFA,GlaxoSmithKline,7317
-Seroquel,AstraZeneca,7147
-Suboxone,,7019
-Lovaza,GlaxoSmithKline,6539
-Vytorin,Merck,6465
-Lidoderm,Endo Pharmaceuticals Inc.,6440
-Benicar,Daiichi Sankyo,6272
-Symbicort,AstraZeneca,6208
+Crestor,AstraZeneca,15.677
+AndroGel,AbbVie Inc.,14.84
+Spiriva,,12.724
+Lantus Solostar,Sanofi,12.635
+Novolog,Novo Nordisk,11.713
+Actos,Takeda Pharmaceutical Company Limited,11.31
+Nasonex,Merck,11.038
+Humalog,Eli Lilly and Company,10.537
+Abilify,"Otsuka Pharmaceutical Co., Ltd",10.171
+metoprolol,Generic Drug,9.847
+Levemir,Novo Nordisk,9.132
+Lexapro,Allergan plc,8.964
+Diovan,Novartis Pharmaceuticals Corporation,8.858
+Combivent,"Boehringer Ingelheim Pharmaceuticals, Inc.",8.266
+Namenda,Allergan plc,8.207
+Januvia,Merck,8.157
+Lyrica,Pfizer Inc.,8.124
+Zetia,Merck,7.946
+enoxaparin,Generic Drug,7.942
+NovoLog FlexPen,Novo Nordisk,7.696
+Flovent HFA,GlaxoSmithKline,7.317
+Seroquel,AstraZeneca,7.147
+Suboxone,,7.019
+Lovaza,GlaxoSmithKline,6.539
+Vytorin,Merck,6.465
+Lidoderm,Endo Pharmaceuticals Inc.,6.44
+Benicar,Daiichi Sankyo,6.272
+Symbicort,AstraZeneca,6.208
 venlafaxine,Generic Drug,
-Remicade,"Janssen Pharmaceuticals, Inc.",5983
-Diovan HCT,Novartis Pharmaceuticals Corporation,5513
-OxyContin,Purdue Pharma LP,5324
+Remicade,"Janssen Pharmaceuticals, Inc.",5.983
+Diovan HCT,Novartis Pharmaceuticals Corporation,5.513
+OxyContin,Purdue Pharma LP,5.324
 Synthroid,AbbVie Inc.,
-Restasis,Allergan plc,5214
-Zyprexa,,4938
-Lovenox,Sanofi,4925
-Niaspan,AbbVie Inc.,4743
+Restasis,Allergan plc,5.214
+Zyprexa,,4.938
+Lovenox,Sanofi,4.925
+Niaspan,AbbVie Inc.,4.743
 valacyclovir,Generic Drug,
-Celebrex,Pfizer Inc.,4158
+Celebrex,Pfizer Inc.,4.158
 bupropion,Generic Drug,
-TriCor,AbbVie Inc.,3921
-Evista,,3794
-Aciphex,Eisai Inc.,3617
+TriCor,AbbVie Inc.,3.921
+Evista,,3.794
+Aciphex,Eisai Inc.,3.617
 donepezil,Generic Drug,
-Janumet,Merck,3457
-Enbrel,Amgen Inc.,3432
-Geodon,Pfizer Inc.,2892
-Epogen,Amgen Inc.,2868
+Janumet,Merck,3.457
+Enbrel,Amgen Inc.,3.432
+Geodon,Pfizer Inc.,2.892
+Epogen,Amgen Inc.,2.868
 VESIcare,"Astellas Pharma US, Inc.",
-Vyvanse,Takeda Pharmaceutical Company Limited,2763
+Vyvanse,Takeda Pharmaceutical Company Limited,2.763
 Tamiflu,,
-Rebif,"EMD Serono, Inc.",2404
-amphetamine/dextroamphetamine,Generic Drug,2348
-Cialis,Eli Lilly and Company,2245
+Rebif,"EMD Serono, Inc.",2.404
+amphetamine/dextroamphetamine,Generic Drug,2.348
+Cialis,Eli Lilly and Company,2.245
 Xalatan,Pfizer Inc.,
-Truvada,"Gilead Sciences, Inc.",2163
-Humira,AbbVie Inc.,2162
-Rituxan,"Genentech, Inc.",2127
-Provigil,"Teva Pharmaceuticals USA, Inc.",1929
-Avastin,"Genentech, Inc.",1869
-Viagra,Pfizer Inc.,1859
-Atripla,"Gilead Sciences, Inc.",1846
-Seroquel XR,AstraZeneca,1810
+Truvada,"Gilead Sciences, Inc.",2.163
+Humira,AbbVie Inc.,2.162
+Rituxan,"Genentech, Inc.",2.127
+Provigil,"Teva Pharmaceuticals USA, Inc.",1.929
+Avastin,"Genentech, Inc.",1.869
+Viagra,Pfizer Inc.,1.859
+Atripla,"Gilead Sciences, Inc.",1.846
+Seroquel XR,AstraZeneca,1.81
 Detrol LA,Pfizer Inc.,
 Pradaxa,"Boehringer Ingelheim Pharmaceuticals, Inc.",
 atorvastatin,Generic Drug,
 methylphenidate,Generic Drug,
-Adderall XR,Takeda Pharmaceutical Company Limited,1654
+Adderall XR,Takeda Pharmaceutical Company Limited,1.654
 Fluvirin,Seqirus,
-Lunesta,Sunovion Pharmaceuticals Inc.,1499
-Aranesp,Amgen Inc.,1397
-Procrit,"Janssen Pharmaceuticals, Inc.",1347
-Neulasta,Amgen Inc.,1298
+Lunesta,Sunovion Pharmaceuticals Inc.,1.499
+Aranesp,Amgen Inc.,1.397
+Procrit,"Janssen Pharmaceuticals, Inc.",1.347
+Neulasta,Amgen Inc.,1.298
 Concerta,"Janssen Pharmaceuticals, Inc.",
-Solodyn,Medicis Pharmaceutical Corporation,1136
-Reyataz,Bristol-Myers Squibb Company,1134
+Solodyn,Medicis Pharmaceutical Corporation,1.136
+Reyataz,Bristol-Myers Squibb Company,1.134
 AMLODIP BES/BENAZ,,
 olanzapine,Generic Drug,
-Erbitux,Eli Lilly and Company,1029
+Erbitux,Eli Lilly and Company,1.029
 Levaquin,"Janssen Pharmaceuticals, Inc.",
 Varivax,Merck,
-Lucentis,"Genentech, Inc.",927
-Copaxone,"Teva Pharmaceuticals USA, Inc.",912
-Isentress,Merck,886
+Lucentis,"Genentech, Inc.",0.927
+Copaxone,"Teva Pharmaceuticals USA, Inc.",0.912
+Isentress,Merck,0.886
 Eloxatin,Sanofi,
-Alimta,Eli Lilly and Company,677
-Neupogen,Amgen Inc.,646
+Alimta,Eli Lilly and Company,0.677
+Neupogen,Amgen Inc.,0.646
