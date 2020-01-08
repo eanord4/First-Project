@@ -5,23 +5,7 @@
 
 
 import os, csv
-
-
-indir = 'drugs.com-datasets-original'
-outdir = 'drugs.com-datasets-preprocessed'
-path_funcs = {
-
-    'in': {
-        'sales': lambda year: os.path.join(indir, f'sales {year}.txt'),
-        'units': lambda year: os.path.join(indir, f'units {year}.txt')
-    },
-
-    'out': {
-        'sales': lambda year: os.path.join(outdir, f'sales {year}.csv'),
-        'units': lambda year: os.path.join(outdir, f'units {year}.csv')
-    }
-
-}
+from drugs_tools import _path_funcs
 
 
 def process_file(value_type, year):
