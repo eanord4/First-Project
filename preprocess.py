@@ -10,11 +10,11 @@ from drugs_tools import _path_funcs
 
 def process_file(value_type, year):
 
-    inpath = path_funcs['in'][value_type](year)
-    outpath = path_funcs['out'][value_type](year)
+    inpath = _path_funcs['in'][value_type](year)
+    outpath = _path_funcs['out'][value_type](year)
     infilename = os.path.split(inpath)[-1]
     outfilename = os.path.split(outpath)[-1]
-    print(f'Processing {infilename} to {outfilename}...')
+    print(f'Processing "{infilename}" to "{outfilename}"...')
 
     with open(inpath, 'r') as infile, open(outpath, 'w') as outfile:
         
@@ -24,15 +24,15 @@ def process_file(value_type, year):
         writer.writerow([
             'name',
             'company',
-            value_type + '_thousands'  # both sales and units are given in thousands
+            value_type + '_1000s'  # both sales and units are given in thousands
         ])  # header of output file
 
-        for inline in infile:
+        for line in infile:
             
             if odd:
-                last_odd = inline.split('\t')
+                last_odd = line.split('\t')
             else:
-                last_even = inline.split('\t')
+                last_even = line.split('\t')
                 writer.writerow([
                     last_odd[1].rstrip(),  # drug name
                     last_even[-4] if len(last_even) > 3 else '',  # company
