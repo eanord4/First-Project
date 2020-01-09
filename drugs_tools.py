@@ -46,8 +46,11 @@ def dataframe(value_types, years, dropna=True, companies=False):
         value_type = value_types[0]
 
     # interpret `years`
-    if '__iter__' in dir(years):
-        # iterable
+    if isinstance(years, str):
+        years = [int(years)]
+        sum = False
+    elif '__iter__' in dir(years):
+        # other iterable
         years = list(years)
         sum = True
     else:
