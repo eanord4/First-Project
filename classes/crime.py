@@ -62,7 +62,10 @@ class Crime:
             self.df_data = self.df_data.append(df_result, ignore_index = True)
 
             # Renaming columns
-            self.df_data.rename(columns = self.col_name, inplace = True)   
+            self.df_data.rename(columns = self.col_name, inplace = True)
+            
+            # Adding Epoch time format
+            self.df_data['Epoch'] = (pd.to_datetime(self.df_data["Reported Timestamp"]) - pd.Timestamp("1970-01-01")) // pd.Timedelta('1s')
 
             return self.df_data
         except:
