@@ -7,7 +7,7 @@ import time
 from pandas.io.json import json_normalize
 
 # Import API key
-from api_keys import weather_key
+from classes.api_keys import weather_key
 
 
 class Weather:
