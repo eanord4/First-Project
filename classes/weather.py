@@ -15,6 +15,10 @@ class Weather:
     # API key to DarkSky
     api_key = weather_key
     
+    # Define Latitude and Longitude
+    lat = "30.3103"
+    long = "97.7622"
+    
     # Creting an empty dataframe to store results
     df_data = pd.DataFrame()
     
@@ -40,10 +44,10 @@ class Weather:
             self.data = []
 
     # Get json weather
-    def get_json_weather(self, lat, long, date):
+    def get_json_weather(self, date):
         
         # Base url for API call
-        url = f"https://api.darksky.net/forecast/{self.api_key}/{lat},{long},{date}"
+        url = f"https://api.darksky.net/forecast/{self.api_key}/{self.lat},{self.long},{date}"
         
         payload = {}
     
