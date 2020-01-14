@@ -7,7 +7,7 @@ import time
 from pandas.io.json import json_normalize
 
 # Import API key
-from api_keys import weather_key
+from classes.api_keys import weather_key
 
 
 class Weather:
@@ -17,7 +17,7 @@ class Weather:
     
     # Define Latitude and Longitude
     lat = "30.3103"
-    long = "97.7622"
+    long = "-97.7622"
     
     # Creting an empty dataframe to store results
     df_data = pd.DataFrame()
@@ -70,9 +70,6 @@ class Weather:
 
         # Renaming columns
         self.df_data.rename(columns = self.col_name, inplace = True) 
-        
-        # Converting dates
-        #self.df_data['Date'] = time.strftime('%m/%d/%Y',time.localtime(self.df_data["Date"]))
 
         return self.df_data
     

@@ -6,8 +6,9 @@
 import os, traceback
 import datetime as dt
 import pandas as pd
-from weather import Weather
-from crime import Crime
+from classes.weather import Weather
+from classes.crime import Crime
+from hour import hour
 
 
 crime_filename = "crime_data.csv"
@@ -19,16 +20,6 @@ data_folder = "data"
 ###
 crime_header = "incident_no,description,code,family_violence,occur_date,report_datetime,loc_type,zip"
 weather_header = "cloud_cover,dew_pt,humidity,precip_intensity,precip_prob,pressure,summary,temp,timestamp,uv,visibility,windspeed"  # leaves out icon and wind bearing
-
-
-def hour(crimedt):
-    """convert a datetime value from the crime dataset into a datetime object, rounding down to the hour"""
-
-    date, time = crimedt.split('T')
-    year, month, day = date.split('-')
-    hour, *_ = time.split(':')
-
-    return dt.datetime(int(year), int(month), int(day), int(hour))
 
 def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, last_day_filename=last_day_filename, data_folder=data_folder):
     """loop to retrieve as much crime and weather data as possible"""
@@ -49,33 +40,55 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
         day = dt.date.fromordinal(ordinal)
 
     else:
-        # initialize day as today
-        day = dt.datetime.combine(dt.date.today(), dt.datetime.min.time())
+        # initialize day as yesterday
+        day = dt.datetime.combine(dt.date.today() - one_day, dt.datetime.min.time())
     
     print(f"Collecting data starting from day={day}...\n")
-    
-    with open(crime_path, 'a') as crimefile, open(weather_path, 'a') as weatherfile, open(day_path, 'w') as dayfile:
+
+    try:
+        while True:
+
+            # get crime data
+            day_str = 'T'.join(str(day).split())
+            next_day_str = 'T'.join(str(day + one_day).split())
+            orig_len = len(obj_crime.df_data)
+            obj_crime.get_df_crime(obj_crime.get_json_crime(day_str, next_day_str))  # store new data to Crime instance
+
+            # get weather data only if crimes found
+            if len(obj_crime.df_data) > orig_len:
+                obj_weather.get_df_weather(obj_weather.get_json_weather(day.timestamp()))
+            
+            # go back one day
+            day -= one_day
         
-        try:
-            while True:  # end once bad response received
+    except Exception:
 
-                # get crime data
-                day_str = 'T'.join(str(day).split())
-                next_day_str = 'T'.join(str(day + one_day).split())
-                crimedf = obj_crime.get_df_crimes(obj_crime.get_json_crimes(day_str, next_day_str))
-                crimedf.to_csv(crimefile, header=False)
+        # get 
+        traceback.print_exc()
+        print()
+    
+    # with open(crime_path, 'a') as crimefile, open(weather_path, 'a') as weatherfile, open(day_path, 'w') as dayfile:
+        
+    #     try:
+    #         while True:  # end once bad response received
 
-                # get weather data only if crimes found
-                if len(crimedf):
-                    weatherdf = obj_weather.get_df_weather(obj_weather.get_json_weather(day.timestamp()))
-                    weatherdf.to_csv(weatherfile, header=False)
+    #             # get crime data
+    #             day_str = 'T'.join(str(day).split())
+    #             next_day_str = 'T'.join(str(day + one_day).split())
+    #             crimedf = obj_crime.get_df_crime(obj_crime.get_json_crime(day_str, next_day_str))
+    #             crimedf.to_csv(crimefile, header=False)
+
+    #             # get weather data only if crimes found
+    #             if len(crimedf):
+    #                 weatherdf = obj_weather.get_df_weather(obj_weather.get_json_weather(day.timestamp()))
+    #                 weatherdf.to_csv(weatherfile, header=False)
                 
-                # go back one day
-                day -= one_day
+    #             # go back one day
+    #             day -= one_day
 
-        except:
-            traceback.print_exc()
-            print()
+    #     except:
+    #         traceback.print_exc()
+    #         print()
         
         # save day on which error occurred
         print(f"Saving break point at day={day}...\n")
