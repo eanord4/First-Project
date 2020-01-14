@@ -35,8 +35,7 @@ class Crime:
     # Constructor
     def __init__(self):
             self.data = []
-            
-            
+                       
 
     # Get json of crimes by date range
     def get_json_crime(self, start_date, end_date):
@@ -48,9 +47,7 @@ class Crime:
     
         # Calling API and store response
         return requests.get(url, params=payload).json()
-
-        
-        
+    
     # Get dataframe of crimes given a json
     def get_df_crime(self, json_crimes):
         
