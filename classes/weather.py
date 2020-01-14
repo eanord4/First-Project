@@ -17,7 +17,7 @@ class Weather:
     
     # Define Latitude and Longitude
     lat = "30.3103"
-    long = "97.7622"
+    long = "-97.7622"
     
     # Creting an empty dataframe to store results
     df_data = pd.DataFrame()
