@@ -24,18 +24,11 @@ weather_header = "cloud_cover,dew_pt,humidity,precip_intensity,precip_prob,press
 def hour(crimedt):
     """convert a datetime value from the crime dataset into a datetime object, rounding down to the hour"""
 
-    parts = crimedt.split('/')
-    parts[2] = parts[2].split()
-    parts[2][1] = parts[2][1].split(':')
+    date, time = crimedt.split('T')
+    year, month, day = date.split('-')
+    hour, *_ = time.split(':')
 
-    (month, day), year = parts[:2], parts[2][0]
-
-    if parts[2][2] == 'AM':
-        hour = parts[2][1][0]
-    else:
-        hour = parts[2][1][0] + 12
-
-    return dt.datetime(year, month, day, hour)
+    return dt.datetime(int(year), int(month), int(day), int(hour))
 
 def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, last_day_filename=last_day_filename, data_folder=data_folder):
     """loop to retrieve as much crime and weather data as possible"""
@@ -57,7 +50,7 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
 
     else:
         # initialize day as today
-        day = dt.date.today()
+        day = dt.datetime.combine(dt.date.today(), dt.datetime.min.time())
     
     print(f"Collecting data starting from day={day}...\n")
     
@@ -67,12 +60,14 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
             while True:  # end once bad response received
 
                 # get crime data
-                crimedf = obj_crime.get_crimes(day)
+                day_str = 'T'.join(str(day).split())
+                next_day_str = 'T'.join(str(day + one_day).split())
+                crimedf = obj_crime.get_df_crimes(obj_crime.get_json_crimes(day_str, next_day_str))
                 crimedf.to_csv(crimefile, header=False)
 
                 # get weather data only if crimes found
                 if len(crimedf):
-                    weatherdf = obj_weather.get_weather(dt.datetime.combine(day, dt.datetime.min.time()))
+                    weatherdf = obj_weather.get_df_weather(obj_weather.get_json_weather(day.timestamp()))
                     weatherdf.to_csv(weatherfile, header=False)
                 
                 # go back one day
