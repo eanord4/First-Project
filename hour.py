@@ -1,3 +1,5 @@
+import datetime as dt
+
 def hour(crimedt):
     """convert a datetime value from the crime dataset into a datetime object, rounding down to the hour"""
 
