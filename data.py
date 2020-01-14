@@ -62,7 +62,7 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
                 # get crime data
                 day_str = 'T'.join(str(day).split())
                 next_day_str = 'T'.join(str(day + one_day).split())
-                crimedf = obj_crime.get_df_crimes(obj_crime.get_json_crimes(day_str, next_day_str))
+                crimedf = obj_crime.get_df_crime(obj_crime.get_json_crime(day_str, next_day_str))
                 crimedf.to_csv(crimefile, header=False)
 
                 # get weather data only if crimes found
