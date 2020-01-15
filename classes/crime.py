@@ -9,7 +9,7 @@ from hour import hour
 from pandas.io.json import json_normalize
 
 # Import API key
-from classes.api_keys import crime_key
+from api_keys import crime_key
 
 
 class Crime:
