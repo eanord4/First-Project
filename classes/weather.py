@@ -38,6 +38,9 @@ class Weather:
             "visibility": "Visibility", 
             "windBearing": "Wind Bearing", 
             "windSpeed": "Wind Speed"}
+    
+    # Column order before renaming
+    col_order = ["time", "apparentTemperature", "cloudCover", "dewPoint", "humidity", "icon", "precipIntensity", "precipProbability", "pressure", "summary", "temperature", "uvIndex", "visibility", "windBearing", "windSpeed"]
 
     # Constructor
     def __init__(self):
@@ -63,7 +66,7 @@ class Weather:
         # Converting json response to a dictionary then to a Dataframe
         df_json = pd.DataFrame.from_dict(json_normalize(json_weather), orient='columns')
 
-        df_result = df_json[["time", "apparentTemperature", "cloudCover", "dewPoint", "humidity", "icon", "precipIntensity", "precipProbability", "pressure", "summary", "temperature", "uvIndex", "visibility", "windBearing", "windSpeed"]]
+        df_result = df_json[self.col_order]
 
         # Appenging all the data
         self.df_data = self.df_data.append(df_result, ignore_index = True)
