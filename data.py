@@ -18,8 +18,8 @@ synth_filename = "combined_data.csv"
 data_folder = "data"
 
 # headers for outputting to CSV files - only used at start; not if continuing from previously saved point
-crime_header = ','.join(Crime.col_order) + '\n'
-weather_header = ','.join(Weather.col_order) + '\n'
+crime_header = ','.join(Crime.col_name[orig_name] for orig_name in Crime.col_order) + '\n'
+weather_header = ','.join(Weather.col_name[orig_name] for orig_name in Weather.col_order) + '\n'
 
 
 def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, last_day_filename=last_day_filename, data_folder=data_folder):
