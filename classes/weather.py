@@ -73,9 +73,6 @@ class Weather:
 
         # Renaming columns
         self.df_data.rename(columns = self.col_name, inplace = True) 
-        
-        # Converting dates
-        #self.df_data['Date'] = time.strftime('%m/%d/%Y',time.localtime(self.df_data["Date"]))
 
         return self.df_data
     
