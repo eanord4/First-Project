@@ -48,13 +48,18 @@ class Crime:
 
         # Call API
         payload = {}
-        response = requests.get(url, params=payload).json()
+        response = requests.get(url, params=payload)
 
         # If bad response: print warning
         if response.status_code != 200:
             print(f"** Got bad response from crime API with status code {response.status_code}. **")
+        elif not len(response.json()):
+            print(f"** Got OK response but empty JSON ({response.json()}). **")
+        else:
+            print("** Got OK response **")
+            print(f"\t{response.json()}")
 
-        return response
+        return response.json()
     
     # Get dataframe of crimes given a json
     def get_df_crime(self, json_crimes):

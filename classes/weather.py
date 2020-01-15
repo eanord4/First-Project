@@ -54,11 +54,14 @@ class Weather:
 
         # Call API
         payload = {}
-        response = requests.get(url, params=payload).json()
+        response = requests.get(url, params=payload)
 
         # If bad response: print warning
         if response.status_code != 200:
             print(f"** Got bad response from weather API with status code {response.status_code}. **")
+        elif 'hourly' not in response.json() or 'data' not in response.json()['hourly'] or not len(response.json()['hourly']['data']):
+            print(f"** Got OK response from weather API but bad JSON. **")
+            print(f"\t{response.json()}")
 
         return response.json()['hourly']['data']
 
