@@ -42,8 +42,8 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
 
     else:
 
-        # initialize day as yesterday
-        day = dt.datetime.combine(dt.date.today() - one_day, dt.datetime.min.time())
+        # initialize day as one month ago (more recent days might not have entered reports yet.)
+        day = dt.datetime.combine(dt.date.today() - 30 * one_day, dt.datetime.min.time())
 
         # initialize data files with headers
         with open(crime_path, 'w') as crimefile, open(weather_path, 'w') as weatherfile:
@@ -65,7 +65,6 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
             orig_len = len(obj_crime.df_data)
             obj_crime.get_df_crime(obj_crime.get_json_crime(day_str, next_day_str))  # store new data to Crime instance
             num_crimes = len(obj_crime.df_data) - orig_len
-
             print("\tnumber of crimes:", num_crimes)
 
             # get weather data only if crimes found
@@ -73,7 +72,10 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
                 print("Collecting weather data...")
                 timestamp = str(int(day.timestamp()))
                 print("\ttimestamp:", timestamp)
+                orig_len = len(obj_weather.df_data)
                 obj_weather.get_df_weather(obj_weather.get_json_weather(timestamp))  # store new data to Weather instance
+                hours = len(obj_weather.df_data) - orig_len
+                print(f"\t{hours} hours of data")
             
             print()
             
@@ -88,16 +90,16 @@ def retrieve(crime_filename=crime_filename, weather_filename=weather_filename, l
             print()
         
         except:
-            # print other exception - apparently necessary when connections time out
+            # print other exception - apparently necessary for keyboard interrupts/connection timeouts
             print('Another exception also occurred:')
             traceback.print_exc()
 
-        # save data
-        print(f"Saving data through day={day}...\n")
-        with open(crime_path, 'a') as crimefile, open(weather_path, 'a') as weatherfile, open(day_path, 'w') as dayfile:
-            obj_crime.df_data.to_csv(crimefile, header=False, index=False)
-            obj_weather.df_data.to_csv(weatherfile, header=False, index=False)
-            dayfile.write(str(day.toordinal()))
+    # save data
+    print(f"Saving data through day={day}...\n")
+    with open(crime_path, 'a') as crimefile, open(weather_path, 'a') as weatherfile, open(day_path, 'w') as dayfile:
+        obj_crime.df_data.to_csv(crimefile, header=False, index=False)
+        obj_weather.df_data.to_csv(weatherfile, header=False, index=False)
+        dayfile.write(str(day.toordinal()))
 
     
     # with open(crime_path, 'a') as crimefile, open(weather_path, 'a') as weatherfile, open(day_path, 'w') as dayfile:
