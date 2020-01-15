@@ -46,10 +46,15 @@ class Crime:
         # Base url for API call
         url = f"https://data.austintexas.gov/resource/fdj4-gpfu.json?$where=rep_date_time between '{start_date}' and '{end_date}'"
 
+        # Call API
         payload = {}
-    
-        # Calling API and store response
-        return requests.get(url, params=payload).json()
+        response = requests.get(url, params=payload).json()
+
+        # If bad response: print warning
+        if response.status_code != 200:
+            print(f"** Got bad response from crime API with status code {response.status_code}. **")
+
+        return response
     
     # Get dataframe of crimes given a json
     def get_df_crime(self, json_crimes):

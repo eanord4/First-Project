@@ -51,12 +51,16 @@ class Weather:
         
         # Base url for API call
         url = f"https://api.darksky.net/forecast/{self.api_key}/{self.lat},{self.long},{date}"
-        
+
+        # Call API
         payload = {}
-    
-        # Calling API and store response
-        r = requests.get(url, params=payload)
-        return r.json()['hourly']['data']
+        response = requests.get(url, params=payload).json()
+
+        # If bad response: print warning
+        if response.status_code != 200:
+            print(f"** Got bad response from weather API with status code {response.status_code}. **")
+
+        return response.json()['hourly']['data']
 
     
     
