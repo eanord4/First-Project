@@ -38,6 +38,9 @@ class Weather:
             "visibility": "Visibility", 
             "windBearing": "Wind Bearing", 
             "windSpeed": "Wind Speed"}
+    
+    # Column order before renaming
+    col_order = ["time", "apparentTemperature", "cloudCover", "dewPoint", "humidity", "icon", "precipIntensity", "precipProbability", "pressure", "summary", "temperature", "uvIndex", "visibility", "windBearing", "windSpeed"]
 
     # Constructor
     def __init__(self):
@@ -48,12 +51,19 @@ class Weather:
         
         # Base url for API call
         url = f"https://api.darksky.net/forecast/{self.api_key}/{self.lat},{self.long},{date}"
-        
+
+        # Call API
         payload = {}
-    
-        # Calling API and store response
-        r = requests.get(url, params=payload)
-        return r.json()['hourly']['data']
+        response = requests.get(url, params=payload)
+
+        # If bad response: print warning
+        if response.status_code != 200:
+            print(f"** Got bad response from weather API with status code {response.status_code}. **")
+        elif 'hourly' not in response.json() or 'data' not in response.json()['hourly'] or not len(response.json()['hourly']['data']):
+            print(f"** Got OK response from weather API but bad JSON. **")
+            print(f"\t{response.json()}")
+
+        return response.json()['hourly']['data']
 
     
     
@@ -63,7 +73,7 @@ class Weather:
         # Converting json response to a dictionary then to a Dataframe
         df_json = pd.DataFrame.from_dict(json_normalize(json_weather), orient='columns')
 
-        df_result = df_json[["time", "apparentTemperature", "cloudCover", "dewPoint", "humidity", "icon", "precipIntensity", "precipProbability", "pressure", "summary", "temperature", "uvIndex", "visibility", "windBearing", "windSpeed"]]
+        df_result = df_json[self.col_order]
 
         # Appenging all the data
         self.df_data = self.df_data.append(df_result, ignore_index = True)
