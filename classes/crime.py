@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import time
 
-from hour import hour
+from time_tools import dt_from_string
 
 # Normalize json file to fit a dict, then a dataframe
 from pandas.io.json import json_normalize
@@ -77,7 +77,7 @@ class Crime:
             self.df_data.rename(columns = self.col_name, inplace = True)
 
             # Converting dates to epoch
-            self.df_data['Epoch'] = self.df_data["Reported Timestamp"].apply(lambda x: int(str(hour(x).timestamp())[:-2]))
+            self.df_data['Epoch'] = self.df_data["Reported Timestamp"].apply(lambda x: int(dt_from_string(x)))
 
             return self.df_data
 

@@ -10,21 +10,6 @@ import datetime as dt
 
 # functions
 
-def hour(dt_str, midsep='T', round=True):
-    """convert a datetime value from string-timestap format into a datetime object, rounding down to the hour if specified"""
-
-    if len(dt_str) < 11:
-        dt_str += midsep + '00:00:00'
-
-    date, time = dt_str.split(midsep)
-    year, month, day = date.split('-')
-    hour, minute, second = time.split(':')
-
-    if round:
-        minute, second = 0, 0
-
-    return dt.datetime(int(year), int(month), int(day), int(hour), int(minute), int(second))
-
 def dt_from_string(dt_str, midsep='T', round_hour=True):
     """convert a datetime value from string-timestap format into a datetime object, rounding down to the hour if specified"""
 
