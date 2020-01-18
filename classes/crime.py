@@ -57,7 +57,7 @@ class Crime:
             print(f"** Got OK response but empty JSON ({response.json()}). **")
         else:
             print("** Got OK response **")
-            print(f"\t{response.json()}")
+#             print(f"\t{response.json()}")
 
         return response.json()
     

@@ -37,10 +37,8 @@ class Weather:
             "uvIndex": "UV Index", 
             "visibility": "Visibility", 
             "windBearing": "Wind Bearing", 
-            "windSpeed": "Wind Speed"}
-    
-    # Column order before renaming
-    col_order = ["time", "apparentTemperature", "cloudCover", "dewPoint", "humidity", "icon", "precipIntensity", "precipProbability", "pressure", "summary", "temperature", "uvIndex", "visibility", "windBearing", "windSpeed"]
+            "windSpeed": "Wind Speed",
+            "moonPhase": "Moon Phase"}
 
     # Constructor
     def __init__(self):
@@ -51,20 +49,40 @@ class Weather:
         
         # Base url for API call
         url = f"https://api.darksky.net/forecast/{self.api_key}/{self.lat},{self.long},{date}"
+        
+        payload = {}   
+    
+        # Calling API and store response
+        r = requests.get(url, params=payload)
+        
+        # Getting more attributes from the daily block
+        moonPhase = self.getAttributes(r, "daily", "moonPhase")
+        
+        json_block = r.json()['hourly']['data']
+        
+        for i in range(0, len(json_block) - 1):
+            json_block[i]["moonPhase"] = moonPhase
+        
+        return json_block
+    
+    
+    
+    # Get attributes from another block
+    def getAttributes(self, r, block, attribute):
+        json_block = r.json()[block]["data"]
+        for element in json_block:
+            value = element[attribute]
+        
+        return self.get_moon_description(value)
+    
 
-        # Call API
-        payload = {}
-        response = requests.get(url, params=payload)
-
-        # If bad response: print warning
-        if response.status_code != 200:
-            print(f"** Got bad response from weather API with status code {response.status_code}. **")
-        elif 'hourly' not in response.json() or 'data' not in response.json()['hourly'] or not len(response.json()['hourly']['data']):
-            print(f"** Got OK response from weather API but bad JSON. **")
-            print(f"\t{response.json()}")
-
-        return response.json()['hourly']['data']
-
+    def get_moon_description(self, moonPhase):
+        if moonPhase >= 0 and moonPhase < 0.25: desc = "New Moon"
+        if moonPhase >= 0.25 and moonPhase < 0.50: desc = "New Moon"
+        if moonPhase >= 0.50 and moonPhase < 0.75: desc = "New Moon"
+        if moonPhase >= 0.75: desc = "New Moon"
+        
+        return desc
     
     
     # Get dataframe weather
@@ -73,7 +91,7 @@ class Weather:
         # Converting json response to a dictionary then to a Dataframe
         df_json = pd.DataFrame.from_dict(json_normalize(json_weather), orient='columns')
 
-        df_result = df_json[self.col_order]
+        df_result = df_json[["time", "apparentTemperature", "cloudCover", "dewPoint", "humidity", "icon", "precipIntensity", "precipProbability", "pressure", "summary", "temperature", "uvIndex", "visibility", "windBearing", "windSpeed", "moonPhase"]]
 
         # Appenging all the data
         self.df_data = self.df_data.append(df_result, ignore_index = True)
