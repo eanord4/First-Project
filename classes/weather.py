@@ -78,9 +78,9 @@ class Weather:
 
     def get_moon_description(self, moonPhase):
         if moonPhase >= 0 and moonPhase < 0.25: desc = "New Moon"
-        if moonPhase >= 0.25 and moonPhase < 0.50: desc = "New Moon"
-        if moonPhase >= 0.50 and moonPhase < 0.75: desc = "New Moon"
-        if moonPhase >= 0.75: desc = "New Moon"
+        if moonPhase >= 0.25 and moonPhase < 0.50: desc = "First Quarter Moon"
+        if moonPhase >= 0.50 and moonPhase < 0.75: desc = "Full Moon"
+        if moonPhase >= 0.75: desc = "Last Quarter Moon"
         
         return desc
     
