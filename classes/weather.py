@@ -56,31 +56,21 @@ class Weather:
         r = requests.get(url, params=payload)
         
         # Getting more attributes from the daily block
-        moonPhase = self.getAttributes(r, "daily", "moonPhase")
+        json = r.json()
+        moonPhase = json['daily']['data'][0]['moonPhase']
         
-        json_block = r.json()['hourly']['data']
+        json_hourly = json['hourly']['data']
         
-        for i in range(0, len(json_block) - 1):
-            json_block[i]["moonPhase"] = moonPhase
+        for i in range(len(json_hourly)):
+            json_hourly[i]["moonPhase"] = moonPhase
         
-        return json_block
-    
-    
-    
-    # Get attributes from another block
-    def getAttributes(self, r, block, attribute):
-        json_block = r.json()[block]["data"]
-        for element in json_block:
-            value = element[attribute]
-        
-        return self.get_moon_description(value)
-    
+        return json_hourly
 
     def get_moon_description(self, moonPhase):
         if moonPhase >= 0 and moonPhase < 0.25: desc = "New Moon"
-        if moonPhase >= 0.25 and moonPhase < 0.50: desc = "New Moon"
-        if moonPhase >= 0.50 and moonPhase < 0.75: desc = "New Moon"
-        if moonPhase >= 0.75: desc = "New Moon"
+        if moonPhase >= 0.25 and moonPhase < 0.50: desc = "First Quarter Moon"
+        if moonPhase >= 0.50 and moonPhase < 0.75: desc = "Full Moon"
+        if moonPhase >= 0.75: desc = "Last Quarter Moon"
         
         return desc
     
